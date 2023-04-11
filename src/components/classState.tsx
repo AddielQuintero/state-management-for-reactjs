@@ -46,7 +46,7 @@ export class ClassState extends Component<Props, State> {
   }
 
   render() {
-    console.log(`value: ${this.state.value}`)
+    // console.log(`value: ${this.state.value}`)
 
     return (
       <div className="text-center">
