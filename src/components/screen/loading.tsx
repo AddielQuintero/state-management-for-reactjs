@@ -6,7 +6,7 @@ type State = {}
 
 export class Loading extends Component<Props, State> {
   componentWillUnmount(): void {
-    // console.log('componentWillUnmount')
+    console.log('componentWillUnmount')
   }
   
   render() {

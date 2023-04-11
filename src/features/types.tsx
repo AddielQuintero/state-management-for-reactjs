@@ -11,6 +11,6 @@ export interface DeleteConfirmationProps {
 
 // Interface for props of DeleteItem
 export interface DeleteItemProps {
-  name: string
+  // name: string
   // handleBack: React.MouseEventHandler<HTMLButtonElement>
 }
