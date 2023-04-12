@@ -1,5 +1,5 @@
 export interface State {
-  value: string
+  value?: string
   loading: boolean
   error: boolean
   delete: boolean
@@ -7,8 +7,9 @@ export interface State {
 }
 
 export type Action =
-  | { type: 'SET_VALUE'; payload: string }
-  | { type: 'SET_LOADING'; payload: boolean }
-  | { type: 'SET_ERROR'; payload: boolean }
-  | { type: 'SET_DELETE'; payload: boolean }
-  | { type: 'SET_CONFIRM'; payload: boolean }
+  | { type: 'SUBMIT'; payload?: string }
+  | { type: 'CONFIRM'; payload?: string }
+  | { type: 'ERROR'; payload?: string }
+  | { type: 'CHECK'; payload?: string }
+  | { type: 'VALUE'; payload?: string }
+  | { type: 'RESET'; payload?: string }
