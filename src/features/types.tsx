@@ -1,16 +1,19 @@
-// Interface for props of DeleteSuccess
-export interface DeleteSuccessProps {
-  handleRetrieve: React.MouseEventHandler<HTMLButtonElement>
+import { State } from "@/components"
+
+export interface DeleteItemProps{
+  itemName: string
+  state: State
+  handleSubmit: React.FormEventHandler<HTMLFormElement>
+  handleChangeInput: React.ChangeEventHandler<HTMLInputElement>
 }
 
-// Interface for props of DeleteConfirmation
 export interface DeleteConfirmationProps {
+  itemName: string
   handleConfirm: React.MouseEventHandler<HTMLButtonElement>
-  handleBack: React.MouseEventHandler<HTMLButtonElement>
+  handleReset: React.MouseEventHandler<HTMLButtonElement>
 }
 
-// Interface for props of DeleteItem
-export interface DeleteItemProps {
-  // name: string
-  // handleBack: React.MouseEventHandler<HTMLButtonElement>
+export interface DeleteSuccessProps {
+  itemName: string
+  handleReset: React.MouseEventHandler<HTMLButtonElement>
 }
