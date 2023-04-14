@@ -13,3 +13,5 @@ export type Action =
   | { type: 'CHECK'; payload?: string }
   | { type: 'VALUE'; payload?: string }
   | { type: 'RESET'; payload?: string }
+
+export interface Props {}

@@ -26,8 +26,8 @@ export const UseReducer = () => {
     dispatch({ type: 'SUBMIT' })
   }
 
-  const handleChangeInput: ChangeEventHandler<HTMLInputElement> = (event) => {
-    dispatch({ type: 'VALUE', payload: event.target.value })
+  const handleChangeInput: ChangeEventHandler<HTMLInputElement> = ({ target: { value }}) => {
+    dispatch({ type: 'VALUE', payload: value })
   }
 
   const handleConfirm: MouseEventHandler<HTMLButtonElement> = () => {
@@ -78,5 +78,5 @@ const reducer = (state: State, action: Action): State => {
     RESET: () => ({ ...state, confirm: false, delete: false }),
   }
 
-  return actions[action.type]() || state
+  return actions[action.type]?.() || state
 }
